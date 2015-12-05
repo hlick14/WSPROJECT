@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	attr_accessor :remember_token
-  has_one :cart 
+  has_many :orders # new line 05/12 
   # dependent: :destroy 
 
 	before_save { self.email = email.downcase }
