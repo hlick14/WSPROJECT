@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
    def show
           @user = User.find(params[:id])
         end
@@ -9,16 +10,18 @@ class UsersController < ApplicationController
       end
 
 
-         def create
-              secure_params = params.require(:user).permit(:name, :email, 
+
+     def create
+           secure_params = params.require(:user).permit(:name, :email, 
                                         :password, :password_confirmation)
-              @user = User.new(secure_params)
-              if @user.save
+         @user = User.new(secure_params)
+         if @user.save
                  remember @user       #  NEW LINE
-                 flash[:success] = "Welcome to the Sample App!"    # NEW LINE
-                 redirect_to @user   # NEW LINE
-              else
-                 render 'new' 
+                 flash[:success] = "Welcome to the MotoShop!"    # NEW LINE
+                 redirect_to products_url   # NEW LINE
+        else
+                 render 'new'
+
               end
 
           end
