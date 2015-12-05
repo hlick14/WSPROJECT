@@ -81,6 +81,7 @@ GEM
     mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
+    mysql2 (0.4.2)
     nokogiri (1.6.7)
       mini_portile2 (~> 2.0.0.rc2)
     nokogiri (1.6.7-x86-mingw32)
@@ -183,6 +184,7 @@ DEPENDENCIES
   coffee-rails (= 4.1.0)
   jbuilder (= 2.2.3)
   jquery-rails (= 4.0.3)
+  mysql2 (= 0.4.2)
   paperclip (~> 4.3)
   pg (= 0.17.1)
   pry-byebug
@@ -196,6 +198,3 @@ DEPENDENCIES
   turbolinks (= 2.3.0)
   uglifier (= 2.5.3)
   web-console (= 2.0.0.beta3)
-
-BUNDLED WITH
-   1.10.6

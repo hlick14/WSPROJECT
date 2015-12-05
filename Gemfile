@@ -29,5 +29,7 @@ source 'https://rubygems.org'
       gem 'pg',             '0.17.1'
       gem 'rails_12factor', '0.0.2'
       gem 'puma',           '2.11.1'
+      gem 'mysql2' , 	     '0.4.2'
+
      
     end
