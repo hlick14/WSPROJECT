@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 	attr_accessor :remember_token
+
+  cattr_accessor :current_user# for use of global variable to access current user in models- precisly order model to store users id and dispaly users models
   has_many :orders # new line 05/12 
   # dependent: :destroy 
 
@@ -43,7 +45,12 @@ class User < ActiveRecord::Base
        def forget
           update_attribute(:remember_digest, nil)
        end
+    def current_user=(user)
+      Thread.current[:current_user] = user
+    end
 
-
-
+    def current_user
+      Thread.current[:current_user]
+    end
+  
 end
