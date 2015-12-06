@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email
 
       t.timestamps null: false
-      t.references :order, index: true, foreign_key: true
+      # t.references :order, index: true, foreign_key: true
     end
   end
 end
