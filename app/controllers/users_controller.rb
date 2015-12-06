@@ -16,7 +16,7 @@ class UsersController < ApplicationController
                                         :password, :password_confirmation)
          @user = User.new(secure_params)
          if @user.save
-                session[:user_id] =User.current_user.id
+                # session[:user_id] =User.current_user.id
                 
                  remember @user       #  NEW LINE
                  flash[:success] = "Welcome to the MotoShop!"    # NEW LINE
