@@ -17,6 +17,7 @@
             <div class="btn-group">
               <%= f.submit "Update Quantity", class: "btn btn-primary" %>
               <%= link_to "Delete", order_item, { data: { confirm: "Are you sure you wish to delete the product '#{order_item.product.name}' from your cart?" }, method: :delete, remote: true, class: "btn btn-danger" } %>
+              <%= link_to "Purchase", order_item, { data: { confirm: "Are you sure you wish to purchase the product '#{order_item.product.name}' ?" }, method: :update, remote: true, class: "btn btn-success" } %>
             </div>
           </div>
         </div>

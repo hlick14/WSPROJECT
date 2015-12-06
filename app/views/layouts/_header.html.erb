@@ -1,3 +1,4 @@
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
   <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <%= link_to "Moto Shop", root_path, id: "logo" %>
@@ -8,8 +9,7 @@
             <li><%= link_to "Help", help_path %></li>
             <% if logged_in? %>
 
-              <li><%= link_to "Users", '#' %></li>
-              <li class="dropdown">
+              
              
               
             
@@ -29,7 +29,8 @@
                   <li><%= link_to "Settings", '#' %></li>
                   <li class="divider"></li>
                   <li>
-                    <%= link_to "Log out", logout_path, method: "delete" %>
+                    <%= link_to "Log out", logout_path, method: "delete",data: { confirm: "Logging out will erase data in your Cart permanently" } %> 
+                   
                   </li>
                 </ul>
 

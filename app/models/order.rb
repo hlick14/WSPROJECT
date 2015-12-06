@@ -9,6 +9,7 @@ class Order < ActiveRecord::Base
   
   before_save :update_subtotal
   before_save :update_user
+  before_save :update_order_status
   
 
   def subtotal
@@ -17,7 +18,7 @@ class Order < ActiveRecord::Base
 private
   def set_order_status
     self.order_status_id = 1
-  end
+   end
   def set_user
       @user = User.current_user.id
       self.user_id = User.current_user.id
@@ -27,6 +28,13 @@ private
 
   def update_subtotal
     self[:subtotal] = subtotal 
+
+  end
+  def update_order_status
+    if self.order_status_id = 1
+      self.order_status_id = 2
+    else
+    end
 
   end
   
