@@ -2,7 +2,7 @@ class Order < ActiveRecord::Base
 
 
   belongs_to :order_status
-  belongs_to :user # new line 05/12
+  # belongs_to :user # new line 05/12
   has_many :order_items
   before_create :set_order_status
   before_create :set_user
