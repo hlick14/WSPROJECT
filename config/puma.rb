@@ -1,12 +1,12 @@
- workers Integer(ENV['WEB_CONCURRENCY'] || 2)
-    threads_count = Integer(ENV['MAX_THREADS'] || 5)
-    threads threads_count, threads_count
 
-    preload_app!
+workers Integer(ENV['WEBCONCURRENCY'] || 2)
+threadscount = Integer(ENV['MAX_THREADS'] || 5)
+threads threads_count, threads_count
 
-    rackup      DefaultRackup
-    port        ENV['PORT']     || 3000
-    environment ENV['RACK_ENV'] || 'development'
+preload_app!
+
+rackup DefaultRackup
+environment ENV['RACK_ENV'] || 'development'
 
     on_worker_boot do
       # Worker specific setup for Rails 4.1+
