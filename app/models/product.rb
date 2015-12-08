@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
   has_many :order_items
-  has_attached_file :photo, :styles => { :small => "150x150>" }
+  has_attached_file :photo, :styles => { :small => "300x300>" }
 
   default_scope { where(active: true) }
   validates_attachment_presence :photo

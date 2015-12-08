@@ -3,12 +3,12 @@
       <aside class="col-md-4">
         <section class="user_info">
           <h1>
-           <!--  <%= gravatar_for @user %>
-            <%= @user.name %> -->
+            <%= gravatar_for @user %>
+            <%= @user.name %>
+
           </h1>
+          <p><%= @user.created_at %></p>
           </section>
       </aside>
-      <bodyC class="col-md-12">
-      <%=render 'layouts/body'%>
-      </bodyC>
+   
     </div>
